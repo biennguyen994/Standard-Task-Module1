@@ -30,7 +30,7 @@ export default class VisaStatus extends React.Component {
 
     render() {
         const { visaStatus } = this.props;
-        const visaExpiryDate = moment(this.props.visaExpiryDate);
+        const visaExpiryDate = this.props.visaExpiryDate ? moment(this.props.visaExpiryDate) : moment();
         let visaDisplay = null;
         if (visaStatus === 'Work Visa' || visaStatus === 'Student Visa') {
             visaDisplay = <div className='ui nine wide column'>
